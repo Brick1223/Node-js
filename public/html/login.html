@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Iniciar Sesión </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff; 
+            color: #000000; 
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #ff0000; 
+        }
+
+        #contenido {
+            background-color: #ffffff; 
+            text-align: center; 
+            padding: 20px; 
+        }
+
+        form {
+            background-color: #ffffff; 
+            border: none; 
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left; 
+        }
+
+        label {
+            color: #000000; 
+            display: block; 
+            margin-bottom: 5px; 
+            font-family: 'Product Sans', sans-serif; 
+            text-shadow: 2px 2px 2px #999999; 
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d9d9d9; 
+            background-color: #f9f9f9; 
+            box-sizing: border-box; 
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+            background-color: #ff0000; 
+            color: #ffffff; 
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            background-color: #e5e5e5; 
+            border: 1px solid #d9d9d9; 
+        }
+
+        button.registrarse,
+        button.olvidar-contrasena,
+        button.ingresar-con {
+            background-color: #ffffff; 
+            color: #000000;
+            font-family: 'Comic Sans MS', cursive; 
+            text-shadow: 2px 2px 2px #999999; 
+        }
+
+        button.ingresar-con {
+            margin-bottom: 10px; 
+        }
+
+        .google-image {
+            max-width: 70px; 
+            height: auto;
+            margin-left: 10px; 
+        }
+
+        .destacado { 
+            text-align: left;
+            position: absolute; 
+            bottom: 0; 
+            left: 10px;
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/img/logotipo.png" alt="Logotipo de la empresa">
+        <h1>Iniciar Sesión</h1>
+    </header>
+
+    <section id="contenido">
+        <form action="procesar-login.php" method="post">
+            <label for="correo" style="font-family: 'Product Sans', sans-serif; text-shadow: 2px 2px 2px #999999;">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="contrasena" style="font-family: 'Product Sans', sans-serif; text-shadow: 2px 2px 2px #999999;">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <button class="registrarse" onclick="window.location.href='C:/Users/Brick/OneDrive/Documentos/ANALISIS Y DESARROLLO DE SOFTWARE/EVIDENCIA PAGINA SYSTESHOT/Registro.html'">Registrarse</button>
+        <button class="olvidar-contrasena" onclick="window.location.href='C:/Users/Brick/OneDrive/Documentos/ANALISIS Y DESARROLLO DE SOFTWARE/EVIDENCIA PAGINA SYSTESHOT/Olvido_contraseña.html'">Olvidé mi contraseña</button>
+
+        <button class="ingresar-con">
+            Ingresar con:
+        </button>
+        
+        <img class="google-image" src="/img/google.png" alt="Ingresar con Google">
+
+        <button class="regresar" onclick="window.location.href='C:/Users/Brick/OneDrive/Documentos/ANALISIS Y DESARROLLO DE SOFTWARE/EVIDENCIA PAGINA SYSTESHOT/Pagina_web.html'">Regresar</button>
+        <p>Explora la interfaz principal del sistema</p>
+    </section>
+</body>
+</html>

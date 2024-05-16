@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Contabilidad - Sitio Web de Gestión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        #contenido {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive; 
+            text-shadow: 2px 2px 2px #000000; 
+            color: #000000;
+        }
+
+        .form-container {
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            color: #000000;
+            display: block;
+            margin-top: 10px;
+            font-family: sans-serif; 
+            font-weight: bold; 
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #000000;
+            font-family: sans-serif; 
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3333;
+        }
+
+        .outer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .inner-table, .inner-th, .inner-td {
+            border: 1px solid #000000;
+        }
+
+        .inner-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .inner-th, .inner-td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .destacado {
+            margin-top: 20px;
+        }
+
+        .destacado li {
+            list-style: none;
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .destacado a {
+            text-decoration: none;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .destacado a:hover {
+            background-color: #ff3333;
+        }
+
+        .small-box span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOGOTIPO.png" alt="Logotipo de la empresa"> 
+        <h1>Contabilidad</h1>
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <section id="contenido">
+        <h2>Registro de Gastos</h2>
+        <div class="form-container">
+            <form id="registroForm">
+                <label for="concepto">Concepto:</label>
+                <input type="text" id="concepto" name="concepto" required>
+
+                <label for="monto">Monto:</label>
+                <input type="text" id="monto" name="monto" required>
+
+                <button type="button" onclick="registrarGasto()">Registrar Gasto</button>
+            </form>
+        </div>
+
+        <table class="outer-table">
+            <tr>
+                <td>
+                    <table class="inner-table">
+                        <tr>
+                            <th class="inner-th">Concepto:</th>
+                        </tr>
+                        <tr>
+                            <td id="conceptoOutput" class="inner-td"></td>
+                        </tr>
+                    </table>
+                </td>
+                
+                <td>
+                    <table class="inner-table">
+                        <tr>
+                            <th class="inner-th">Monto:</th>
+                        </tr>
+                        <tr>
+                            <td id="montoOutput" class="inner-td"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <div class="destacado">
+            <li><a href="Pagina_web.html">Regresar</a></li>
+            <p>Explora la interfaz principal del sistema</p>
+        </div>
+    </section>
+
+    <footer>
+       
+    </footer>
+
+    <script>
+        function registrarGasto() {
+
+            var conceptoValue = document.getElementById('concepto').value;
+            var montoValue = document.getElementById('monto').value;
+
+            document.getElementById('conceptoOutput').innerText = conceptoValue;
+            document.getElementById('montoOutput').innerText = montoValue;
+        }
+    </script>
+</body>
+</html>
